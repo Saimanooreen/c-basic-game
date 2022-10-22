@@ -1,0 +1,57 @@
+#include <iostream>
+
+using namespace std;
+int main(){
+    //Declaring a variable called name 
+    string name{};
+
+    cout<<"Welcome to this adventure game please enter your name!"<< endl;
+    cin>> name;
+    cout<<"Hey! "<< name<<" lets start."<< endl;
+    char answer{};
+    
+    cout<<"You are on a dirt road, it has come to an end. You can go left or right which way would you go?"<<endl;
+    cout<<"Enter 'r' for right and 'l' for left"<<endl;
+    cin>>answer;
+    //using if else ladder
+    if(answer=='l'){
+        cout<<"There was a wild monkey which took away all of your belongings and food you are empty handed"<<endl;
+        cout<<"You came to a river you can walk around it or swim across it-Type 'w' to walk and 's' to swim across it"<<endl;
+        cin>>answer;  
+        
+        if(answer=='w')
+            cout<<"You walked for miles you were exhausted and you lost :("<<endl;
+        else if(answer=='s')
+            cout<<"You swam across and were eaten by an alligator"<<endl;
+    }else if(answer=='r'){
+        cout<<"You come to a bridge, it looks wobbly do you wanna cross it or head back"<<endl;
+        cout<<"Type 'c' to cross it or 'b' to head back"<<endl;
+        cin>>answer;
+        
+        if(answer=='c'){
+            cout<<"You cross the bridge and see an old man who is wounded would you like to help him"<< endl;
+            cout<<"Type 'y' to help him and 'n' not to help him"<<endl;
+            cin>> answer;
+            if(answer=='y')
+                cout<<"You help the old man,and he is pleased by you ,so he gives you a bag of gold and you win!!:)"<<endl;
+            else if(answer=='n')
+                cout<<"You ignore the old man ,he is offended and you lose!"<<endl;
+            else
+                cout<<"Not a valid option"<<endl;
+                
+        }
+        else if(answer=='b'){
+            cout<<"You are a coward and you lose the game"<<endl;
+            
+        }
+                
+                
+    }else{
+        cout<<"Illegal choice"<<endl;
+    }
+    
+                
+                
+ 
+    cout<<"Thank you "<< name<< " for playing this game!"<<endl;
+}
